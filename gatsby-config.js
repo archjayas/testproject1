@@ -1,16 +1,21 @@
 module.exports = {
   siteMetadata: {
-    title: `Gemini Doc Infra - Research`,
-    description: `Research doc infrastructure for developer docs`,
+    title: `Gemini - Research`,
+    description: `Research doc infrastructure`,
     author: `@gatsbyjs`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
       },
     },
     `gatsby-transformer-sharp`,
